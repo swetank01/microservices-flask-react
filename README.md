@@ -8,6 +8,12 @@ python3.6 -m venv env
 source env/bin/activate
 deactivate
 ```
+
+## RUN 
+```
+cd /testdriven-app/services/users/
+python manage.py run
+```
 ## Dependencies - requirement.txt
 ```
 (env)$ pip install flask==0.12.2
