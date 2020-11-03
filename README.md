@@ -14,11 +14,13 @@ deactivate
 cd /testdriven-app/services/users/
 python manage.py run
 ```
-## Dependencies - requirement.txt
+
+##### Dependencies - requirement.txt
 ```
 (env)$ pip install flask==0.12.2
 (env)$ pip install Werkzeug==0.16.1
 ```
+
 ## Docker Config
 
 Next, we need to create a new Docker host with Docker Machine and point the Docker client at it:
@@ -27,6 +29,7 @@ docker -v
 docker-compose -v
 docker-machine -v
 ```
+
 ##### (Optional Steps)
 ```
 docker-machine create -d virtualbox testdriven-dev 
@@ -40,3 +43,14 @@ eval "$(docker-machine env testdriven-dev)"
 docker-compose -f docker-compose-dev.yml build
 docker-compose -f docker-compose-dev.yml up -d
 ```
+
+## Postgres Setup
+- Add a "db" directory to "project", and add a create.sql file in that new directory:
+
+```
+CREATE DATABASE users_prod; 
+CREATE DATABASE users_dev; 
+CREATE DATABASE users_test;
+```
+
+* PYTHON 3 SUPPORT psycopg2==2.8.4
