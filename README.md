@@ -54,3 +54,14 @@ CREATE DATABASE users_test;
 ```
 
 * PYTHON 3 SUPPORT psycopg2==2.8.4
+
+```
+docker-compose -f docker-compose-dev.yml run users python manage.py recreate-db
+docker exec -ti $(docker ps -aqf "name=users-db") psql -U postgres
+```
+##### PostresDB Commands
+```
+\c users_dev
+\dt
+\q
+```
