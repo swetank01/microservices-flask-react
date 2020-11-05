@@ -44,7 +44,7 @@ docker-compose -f docker-compose-dev.yml build
 docker-compose -f docker-compose-dev.yml up -d
 ```
 
-## Postgres Setup
+## Postgres Setup :
 - Add a "db" directory to "project", and add a create.sql file in that new directory:
 
 ```
@@ -65,3 +65,11 @@ docker exec -ti $(docker ps -aqf "name=users-db") psql -U postgres
 \dt
 \q
 ```
+
+## Test Setup :
+- Let's get our tests up and running for this endpoint.
+
+Add a "tests" directory to the "project" directory, and then create the following files inside the newly created directory:
+1. __init__.py
+2. base.py
+3. test_config.py 4. test_users.py
