@@ -5,11 +5,7 @@ from flask import Flask, jsonify
 from flask_sqlalchemy import SQLAlchemy
 
 # instantiate the db
-db = SQLAlchemy(app)
-
-# set config
-app_settings = os.getenv('APP_SETTINGS') 
-app.config.from_object(app_settings)
+db = SQLAlchemy()
 
 def create_app(script_info=None):
     # instantiate the app

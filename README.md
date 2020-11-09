@@ -73,3 +73,17 @@ Add a "tests" directory to the "project" directory, and then create the followin
 1. __init__.py
 2. base.py
 3. test_config.py 4. test_users.py
+
+
+## RESTful Routes
+
+- Let's set up three new routes, following RESTful best practices, with TDD:
+
+- For each, we'll-
+1. writeatest
+2. runthetest,watchingitfail(red)
+3. writejustenoughcodetogetthetesttopass(green)
+4. refactor(ifnecessary)
+
+### POST
+Add the test to the TestUserService() class in project/tests/test_users.py:
